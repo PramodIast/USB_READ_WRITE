@@ -1,0 +1,11 @@
+[Unit]
+Description=Mount USB Drive at Startup
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/usbmount.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
